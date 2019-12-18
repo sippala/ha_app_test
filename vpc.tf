@@ -108,7 +108,7 @@ resource "aws_eip" "eip" {
 resource "aws_nat_gateway" "gw" {
   count           = "${var.eip_count}"
   allocation_id   = "${aws_eip.eip.*.id, count.index}"
-  subnet_id       = "${aws_subnet.public.id}"
+  subnet_id       = "${aws_subnet.public_subnet.*.id[count.index]}"
   depends_on      = ["aws_internet_gateway.my_igw"]
 }
 
