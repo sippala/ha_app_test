@@ -4,7 +4,7 @@
     {
       "Action": "sts:AssumeRole",
       "Principal": {
-         "AWS" : "arn:aws:iam::299029076690:user/bob"	      
+        "Service": "ec2.amazonaws.com"
       },
       "Effect": "Allow",
       "Sid": ""

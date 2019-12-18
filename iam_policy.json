@@ -1,14 +1,14 @@
 {
     "Version": "2012-10-17",
     "Statement": [
-      {
-        "Action": "rds:*",
-        "Effect": "Allow",
-        "Resource": "*"
-      },
-      {
-        "Action": "elasticache:*",
-        "Effect": "Allow",
-        "Resource": "*"
-      }
+        {
+            "Action": "rds:*",
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+	{
+            "Action": "elasticache:*",
+            "Effect": "Allow",
+            "Resource": "*"
+        }
 }
