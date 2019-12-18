@@ -35,7 +35,7 @@ resource "aws_autoscaling_group" "web-asg" {
   desired_capacity     = "${var.desired_capacity}"
   max_size             = "${var.max_size}"
 
-  health_check_type    = "ELB"
+  health_check_type    = "EC2"
   
   target_group_arns    = ["${aws_alb_target_group.alb_target.arn}"]
   launch_configuration = "${aws_launch_configuration.web-servers.name}"
