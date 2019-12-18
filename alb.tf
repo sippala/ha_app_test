@@ -1,5 +1,5 @@
 resource "aws_security_group" "alb_sg" {
-  name        = "ALB HTTPS/S"
+  name        = "ALB HTTP/S"
   description = "Allow HTTP/HTTPS traffic to instances"
   vpc_id      = "${aws_vpc.main.id}"
 
