@@ -65,5 +65,5 @@ resource "aws_autoscaling_group" "web-asg" {
   target_group_arns    = ["${aws_alb_target_group.alb_target.arn}"]
   launch_configuration = "${aws_launch_configuration.web-servers.name}"
   vpc_zone_identifier  = "${aws_subnet.public_subnet.*public_subnet.id*}"
-  service_linked_role_arn = "${asg_role_arn}" 
+  service_linked_role_arn = "${var.asg_role_arn}" 
 }
